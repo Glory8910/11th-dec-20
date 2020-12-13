@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+
+    <div class="container-fluid">
+        <div class="heading">
+            <h3>CRICKET GAME</h3>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <div class="team1">
+                    <h5>TEAM 1</h5>
+                </div>
+                <button id="team1btn" class="btn-btn-primary">Hit</button>
+            </div>
+            <div class="col-4" id="time">
+                timer
+
+            </div>
+            <div class="col-4">
+                <div class="team2">
+                    <h5>TEAM 2</h5>
+                </div>
+                <button id="team2btn" class="btn-btn-primary">Hit</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-4">
+                <table class="table table-sm ">
+                    <!-- <h5>team1</h5> -->
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">player </th>
+                            <th scope="col">ball-1</th>
+                            <th scope="col">ball-2</th>
+                            <th scope="col">ball-3</th>
+                            <th scope="col">ball-4</th>
+                            <th scope="col">ball-5</th>
+                            <th scope="col">ball-6</th>
+                            <th scope="col">total</th>
+
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">player-1</th>
+                            <td id="p1t1b1">Mark</td>
+                            <td id="p1t1b2">Otto</td>
+                            <td id="p1t1b3">@mdo</td>
+                            <td id="p1t1b4">Mark</td>
+                            <td id="p1t1b5">Otto</td>
+                            <td id="p1t1b6">@mdo</td>
+                            <td id="totp1t1">@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">player-2</th>
+                            <td id="p2t1b1">Jacob</td>
+                            <td id="p2t1b2">Thornton</td>
+                            <td id="p2t1b3">@fat</td>
+                            <td id="p2t1b4">Jacob</td>
+                            <td id="p2t1b5">Thornton</td>
+                            <td id="p2t1b6">@fat</td>
+                            <td id="totp2t1">@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">player-3</th>
+                            <td id="p3t1b1">Jacob</td>
+                            <td id="p3t1b2">Thornton</td>
+                            <td id="p3t1b3">@fat</td>
+                            <td id="p3t1b4">Jacob</td>
+                            <td id="p3t1b5">Thornton</td>
+                            <td id="p3t1b6">@fat</td>
+                            <td id="totp3t1">@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">player-4</th>
+                            <td id="p4t1b1">Jacob</td>
+                            <td id="p4t1b2">Thornton</td>
+                            <td id="p4t1b3">@fat</td>
+                            <td id="p4t1b4">Jacob</td>
+                            <td id="p4t1b5">Thornton</td>
+                            <td id="p4t1b6">@fat</td>
+                            <td id="totp4t1">@mdo</td>
+
+                        </tr>
+                        <tr>
+                            <th scope="row">player-5</th>
+                            <td id="p5t1b1">Jacob</td>
+                            <td id="p5t1b2">Thornton</td>
+                            <td id="p5t1b3">@fat</td>
+                            <td id="p5t1b4">Jacob</td>
+                            <td id="p5t1b5">Thornton</td>
+                            <td id="p5t1b6">@fat</td>
+                            <td id="totp5t1">@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">player-6</th>
+                            <td id="p6t1b1">Jacob</td>
+                            <td id="p6t1b2">Thornton</td>
+                            <td id="p6t1b3">@fat</td>
+                            <td id="p6t1b4">Jacob</td>
+                            <td id="p6t1b5">Thornton</td>
+                            <td id="p6t1b6">@fat</td>
+                            <td id="totp6t1">@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">player-7</th>
+                            <td id="p7t1b1">Jacob</td>
+                            <td id="p7t1b2">Thornton</td>
+                            <td id="p7t1b3">@fat</td>
+                            <td id="p7t1b4">Jacob</td>
+                            <td id="p7t1b5">Thornton</td>
+                            <td id="p7t1b6">@fat</td>
+                            <td id="totp7t1">@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">player-8</th>
+                            <td id="p8t1b1">Jacob</td>
+                            <td id="p8t1b2">Thornton</td>
+                            <td id="p8t1b3">@fat</td>
+                            <td id="p8t1b4">Jacob</td>
+                            <td id="p8t1b5">Thornton</td>
+                            <td id="p8t1b6">@fat</td>
+                            <td id="totp8t1">@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">player-9</th>
+                            <td id="p9t1b1">Jacob</td>
+                            <td id="p9t1b2">Thornton</td>
+                            <td id="p9t1b3">@fat</td>
+                            <td id="p9t1b4">Jacob</td>
+                            <td id="p9t1b5">Thornton</td>
+                            <td id="p9t1b6">@fat</td>
+                            <td id="totp9t1">@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">player-10</th>
+                            <td id="p10t1b1">Jacob</td>
+                            <td id="p10t1b2">Thornton</td>
+                            <td id="p10t1b3">@fat</td>
+                            <td id="p10t1b4">Jacob</td>
+                            <td id="p10t1b5">Thornton</td>
+                            <td id="p10t1b6">@fat</td>
+                            <td id="totp10t1">@mdo</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+            <div class="col-4">
+                output area
+            </div>
+
+
+            <div class='col-4'>
+                <table class="table table-sm">
+
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">player </th>
+                            <th scope="col">ball-1</th>
+                            <th scope="col">ball-2</th>
+                            <th scope="col">ball-3</th>
+                            <th scope="col">ball-4</th>
+                            <th scope="col">ball-5</th>
+                            <th scope="col">ball-6</th>
+                            <th scope="col">total</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">player-1</th>
+                            <td id="p1t2b1">Mark</td>
+                            <td id="p1t2b2">Otto</td>
+                            <td id="p1t2b3">@mdo</td>
+                            <td id="p1t2b4">Mark</td>
+                            <td id="p1t2b5">Otto</td>
+                            <td id="p1t2b6">@mdo</td>
+                            <td id="totp1t2">@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">player-2</th>
+                            <td id="p2t2b1">Jacob</td>
+                            <td id="p2t2b2">Thornton</td>
+                            <td id="p2t2b3">@fat</td>
+                            <td id="p2t2b4">Jacob</td>
+                            <td id="p2t2b5">Thornton</td>
+                            <td id="p2t2b6">@fat</td>
+                            <td id="totp2t2">@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">player-3</th>
+                            <td id="p3t2b1">Jacob</td>
+                            <td id="p3t2b2">Thornton</td>
+                            <td id="p3t2b3">@fat</td>
+                            <td id="p3t2b4">Jacob</td>
+                            <td id="p3t2b5">Thornton</td>
+                            <td id="p3t2b6">@fat</td>
+                            <td id="totp3t2">@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">player-4</th>
+                            <td id="p4t2b1">Jacob</td>
+                            <td id="p4t2b2">Thornton</td>
+                            <td id="p4t2b3">@fat</td>
+                            <td id="p4t2b4">Jacob</td>
+                            <td id="p4t2b5">Thornton</td>
+                            <td id="p4t2b6">@fat</td>
+                            <td id="totp4t2">@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">player-5</th>
+                            <td id="p5t2b1">Jacob</td>
+                            <td id="p5t2b2">Thornton</td>
+                            <td id="p5t2b3">@fat</td>
+                            <td id="p5t2b4">Jacob</td>
+                            <td id="p5t2b5">Thornton</td>
+                            <td id="p5t2b6">@fat</td>
+                            <td id="totp5t2">@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">player-6</th>
+                            <td id="p6t2b1">Jacob</td>
+                            <td id="p6t2b2">Thornton</td>
+                            <td id="p6t2b3">@fat</td>
+                            <td id="p6t2b4">Jacob</td>
+                            <td id="p6t2b5">Thornton</td>
+                            <td id="p6t2b6">@fat</td>
+                            <td id="totp6t2">@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">player-7</th>
+                            <td id="p7t2b1">Jacob</td>
+                            <td id="p7t2b2">Thornton</td>
+                            <td id="p7t2b3">@fat</td>
+                            <td id="p7t2b4">Jacob</td>
+                            <td id="p7t2b5">Thornton</td>
+                            <td id="p7t2b6">@fat</td>
+                            <td id="totp7t2">@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">player-8</th>
+                            <td id="p8t2b1">Jacob</td>
+                            <td id="p8t2b2">Thornton</td>
+                            <td id="p8t2b3">@fat</td>
+                            <td id="p8t2b4">Jacob</td>
+                            <td id="p8t2b5">Thornton</td>
+                            <td id="p8t2b6">@fat</td>
+                            <td id="totp8t2">@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">player-9</th>
+                            <td id="p9t2b1">Jacob</td>
+                            <td id="p9t2b2">Thornton</td>
+                            <td id="p9t2b3">@fat</td>
+                            <td id="p9t2b4">Jacob</td>
+                            <td id="p9t2b5">Thornton</td>
+                            <td id="p9t2b6">@fat</td>
+                            <td id="totp9t2">@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">player-10</th>
+                            <td id="p10t2b1">Jacob</td>
+                            <td id="p10t2b2">Thornton</td>
+                            <td id="p10t2b3">@fat</td>
+                            <td id="p10t2b4">Jacob</td>
+                            <td id="p10t2b5">Thornton</td>
+                            <td id="p10t2b6">@fat</td>
+                            <td id="totp10t2">@mdo</td>
+                    </tbody>
+                </table>
+
+
+            </div>
+
+        </div>
+        <script>
+            var hitcount = 0;
+            let t = document.getElementById('team1btn')
+            t.addEventListener('click', function () {
+                hitcount = hitcount + 1;
+                if (hitcount === 1) {
+                    document.getElementById('team2btn').disabled = true;
+
+                    function count60(val) {
+                        document.getElementById('time').innerHTML = val;
+                        console.log('timer', val)
+                        const count = val - 1;
+
+                        setTimeout(() => {
+                            if (count >= 0) {
+
+                                count60(count);
+
+                            }
+                            else {
+
+                                console.log('over')
+
+                                document.getElementById('team2btn').disabled = false;
+
+                            }
+
+                        }, 1000);
+                    }
+                    let value = 10;
+                    count60(value);
+                }
+                // hitcount++;
+                console.log('hit', hitcount);
+                score1();
+
+
+                //document.getElementById('team2btn').disabled=false;
+            });
+
+            function score1() {
+                // console.log('value', hitcount);
+
+                if (hitcount === 1) {
+                    var b1 = document.getElementById('p1t1b1');
+                    b1.innerHTML = randomval();
+                    console.log('b1', b1.innerHTML)
+
+                    if (document.getElementById('p1t1b1').innerHTML !== 0   && hitcount === 1) {
+
+                        var b2 = document.getElementById('p1t1b2')
+                        b2.innerHTML = randomval();
+                        console.log('b2', b2.innerHTML)
+
+
+                        if (document.getElementById('p1t1b2').innerHTML !== 0  && hitcount === 2 ) {
+
+                            var b3 = document.getElementById('p1t1b3')
+                            b3.innerHTML = randomval();
+                            console.log('b3', b3.innerHTML)
+
+                            if (document.getElementById('p1t1b3').innerHTML !== 0  && hitcount === 3) {
+
+                                var b4 = document.getElementById('p1t1b4')
+                                b4.innerHTML = randomval();
+
+
+                                if (document.getElementById('p1t1b4').value !== 0  && hitcount === 4) {
+
+                                    var b5 = document.getElementById('p1t1b5')
+                                    b5.innerHTML = randomval();
+
+
+
+                                    if (document.getElementById('p1t1b5').value !== 0  && hitcount === 5) {
+
+                                        var b6 = document.getElementById('p1t1b6')
+                                        b6.innerHTML = randomval();
+                                        // score2();
+
+                                        if (document.getElementById('p1t1b6').innerHTML !== 0  && hitcount === 6) {
+                                            console.log('b6', document.getElementById('p1t1b6').innerHTML)
+                                            //    score2();
+                                        }
+                                        else if (document.getElementById('p1t1b6').value === 0) {
+                                            console.log('6', document.getElementById('p1t1b6').innerHTML)
+                                            // score2();
+                                            console.log('out')
+
+                                        }
+                                    }
+                                    else if (document.getElementById('p1t1b5').value === 0) {
+                                        console.log('5', document.getElementById('p1t1b5').innerHTML)
+                                        // score2();
+                                        console.log('out')
+
+                                    }
+
+
+
+                                }
+                                else if (document.getElementById('p1t1b4').value === 0) {
+                                    console.log('4', document.getElementById('p1t1b4').innerHTML)
+                                    // score2();
+                                    console.log('out')
+
+                                }
+
+
+                                if (document.getElementById('p1t1b5').value === 0) {
+                                    score2();
+                                    console.log('out')
+                                }
+
+
+
+
+                                else if (document.getElementById('p1t1b6').value === 0) {
+                                    console.log('5', document.getElementById('p1t1b5').innerHTML)
+                                    // score2();
+                                    console.log('out')
+
+                                }
+
+
+
+                            }
+
+                            else if (document.getElementById('p1t1b3').value === 0) {
+                                console.log('3', document.getElementById('p1t1b3').innerHTML);
+                                // score2();
+                                console.log('out')
+
+                            }
+
+
+                        }
+                        else if (document.getElementById('p1t1b2').value === 0) {
+                            console.log('2', document.getElementById('p1t1b2').innerHTML)
+                            // score2();
+                            console.log('out')
+
+                        }
+                    }
+
+                    else if (document.getElementById('p1t1b1').value === 0) {
+                        // score2();
+                        console.log('out')
+                        console.log('1', document.getElementById('p1t1b1').innerHTML);
+
+
+                    }
+                }
+
+
+
+
+
+// && hitcount === 2   && hitcount === 3   && hitcount === 4   && hitcount === 6    && hitcount === 5
+
+//  && hitcount === 6
+
+
+
+
+
+
+                // else  {
+                //      score2();
+                // }
+
+                //   if (document.getElementById('p1t1b6').innerHTML !== 0) {
+                //          score2();
+                //     }
+
+
+                function score2() {
+                    console.log('control is in score2')
+                }
+
+                function randomval() {
+                    var randomans = Math.floor(Math.random() * 6);
+                    console.log(randomans);
+                    return randomans
+                }
+
+
+            }
+        </script>
+</body>
+
+</html>
+
+<!-- function score1() {
+    console.log('value', hitcount);
+    if (hitcount===1){
+   var  b1 = document.getElementById('p1t1b1');
+    b1.innerHTML = randomval();
+}
+
+    if (b1.innerHTML !== 0 && hitcount === 2) {
+
+        var b2 = document.getElementById('p1t1b2')
+        b2.innerHTML = randomval();
+    }
+    else if(b1.innerHTML===0 && hitcount===6 ){
+        score2();
+
+    }
+    if (b2.innerHTML !== 0 && hitcount === 3) {
+
+        var b3 = document.getElementById('p1t1b3')
+        b3.innerHTML = randomval();
+    }
+    else if(b2.innerHTML===0 && hitcount===6 ){
+        score2();
+
+    }
+
+    if (b3.innerHTML !== 0 && hitcount === 4) {
+
+        var b4 = document.getElementById('p1t1b4')
+        b4.innerHTML = randomval();
+    }
+    else if(b3.innerHTML===0 && hitcount===6 ){
+        score2();
+
+    }
+
+    if (b4.innerHTML !== 0 && hitcount === 5) {
+
+       var b5 = document.getElementById('p1t1b5')
+        b5.innerHTML = randomval();
+    }
+    else if(b4.innerHTML===0 && hitcount===6 ){
+        score2();
+
+    }
+
+    if (b5.innerHTML !== 0 && hitcount === 6) {
+
+        var  b6 = document.getElementById('p1t1b6')
+        b6.innerHTML = randomval();
+        score2();
+    }
+    else if(b5.innerHTML===0 && hitcount===6 ){
+        score2();
+
+    }
+    else if(b6.innerHTML===0 && hitcount===6 ){
+        score2();
+
+    }
+
+    function score2(){
+        console.log('control is in score2')
+    }
+
+    function randomval() {
+        var randomans = Math.floor(Math.random() * 6);
+        console.log(randomans);
+        return randomans
+    }
+ 
+
+} -->
